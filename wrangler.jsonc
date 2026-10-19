@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sterbenz-dev",
+  "account_id": "910226764400d7d81440a4bed72cb8e8",
+  "compatibility_date": "2026-10-19",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "sterbenz.dev", "custom_domain": true }],
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "none",
+  },
+  "env": {
+    "preview": {
+      "name": "sterbenz-dev-preview",
+      "workers_dev": true,
+      "preview_urls": false,
+      "routes": [],
+      "assets": { "directory": "./dist", "not_found_handling": "none" },
+    },
+  },
+}
