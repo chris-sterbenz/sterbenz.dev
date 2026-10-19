@@ -1,0 +1,194 @@
+---
+import "../styles/global.css";
+const experience = [
+  {
+    number: "01",
+    period: "Present",
+    role: "Building what comes next.",
+    company: "Current chapter · Placeholder",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.",
+    detail:
+      "Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.",
+    tags: ["Infrastructure", "Platforms", "AI systems"],
+  },
+  {
+    number: "02",
+    period: "Previously",
+    role: "Making complex systems work.",
+    company: "Previous chapter · Placeholder",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis euismod.",
+    detail:
+      "Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.",
+    tags: ["Distributed systems", "Developer tools"],
+  },
+  {
+    number: "03",
+    period: "Earlier",
+    role: "Starting with the foundations.",
+    company: "Earlier chapter · Placeholder",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.",
+    detail:
+      "Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur.",
+    tags: ["Engineering", "Operations"],
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Chris Sterbenz — infrastructure, platforms, and the systems behind them. Experience and links."
+    />
+    <meta name="theme-color" content="#f5f3ed" />
+    <link rel="canonical" href="https://sterbenz.dev/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Chris Sterbenz — sterbenz.dev" />
+    <meta
+      property="og:description"
+      content="Infrastructure, platforms, and the systems behind them."
+    />
+    <meta property="og:url" content="https://sterbenz.dev/" />
+    <title>Chris Sterbenz — sterbenz.dev</title>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">
+      Skip to content
+    </a>
+    <header class="site-header wrap">
+      <a
+        class="wordmark"
+        href="#top"
+        aria-label="cs — Chris Sterbenz, back to top"
+      >
+        cs<span aria-hidden="true">.</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#links">Links</a>
+        <a href="#experience">Experience</a>
+      </nav>
+    </header>
+    <main id="main" class="wrap">
+      <section class="intro" aria-labelledby="intro-title">
+        <div class="intro-copy">
+          <p class="eyebrow">A personal corner of the internet</p>
+          <h1 id="intro-title">
+            Chris
+            <br />
+            Sterbenz<span class="accent">.</span>
+          </h1>
+          <p class="intro-line">
+            Infrastructure, platforms,
+            <br />
+            and the systems behind them.
+          </p>
+          <div class="about">
+            <h2>About me</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
+              leo quam. Pellentesque ornare sem lacinia quam venenatis
+              vestibulum. Donec ullamcorper nulla non metus auctor fringilla.
+            </p>
+          </div>
+        </div>
+        <figure class="portrait">
+          <img
+            src="/headshot.jpg"
+            alt="Chris Sterbenz by a marina"
+            width="460"
+            height="460"
+            fetchpriority="high"
+          />
+          <figcaption>
+            <span>Chris Sterbenz</span>
+            <span aria-hidden="true">↗</span>
+          </figcaption>
+        </figure>
+      </section>
+      <section
+        id="links"
+        class="links-section section-grid"
+        aria-labelledby="links-title"
+      >
+        <div class="section-label">
+          <span class="eyebrow">01 / Elsewhere</span>
+          <h2 id="links-title">Links</h2>
+        </div>
+        <div class="link-list">
+          <a href="https://www.linkedin.com/in/csterbenz">
+            <span>
+              <strong>LinkedIn</strong>
+              <small>Connect &amp; say hello</small>
+            </span>
+            <span class="link-arrow" aria-hidden="true">
+              ↗
+            </span>
+          </a>
+          <a href="https://github.com/chris-sterbenz">
+            <span>
+              <strong>GitHub</strong>
+              <small>Code &amp; contributions</small>
+            </span>
+            <span class="link-arrow" aria-hidden="true">
+              ↗
+            </span>
+          </a>
+          <a href="/chris-sterbenz-resume.pdf" download>
+            <span>
+              <strong>
+                Résumé <span class="file-tag">PDF</span>
+              </strong>
+              <small>Download · placeholder edition</small>
+            </span>
+            <span class="link-arrow" aria-hidden="true">
+              ↓
+            </span>
+          </a>
+        </div>
+      </section>
+      <section
+        id="experience"
+        class="experience-section section-grid"
+        aria-labelledby="experience-title"
+      >
+        <div class="section-label">
+          <span class="eyebrow">02 / The work</span>
+          <h2 id="experience-title">Experience</h2>
+          <p class="section-note">A few chapters along the way.</p>
+        </div>
+        <div class="experience-list">
+          {experience.map((item) => (
+            <article class="experience-item">
+              <div class="entry-meta">
+                <span>{item.period}</span>
+                <span aria-hidden="true">{item.number}</span>
+              </div>
+              <h3>{item.role}</h3>
+              <p class="company">{item.company}</p>
+              <p>{item.description}</p>
+              <p>{item.detail}</p>
+              <ul class="tags" aria-label="Areas of work">
+                {item.tags.map((tag) => (
+                  <li>{tag}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer wrap">
+      <p>© {new Date().getFullYear()} Chris Sterbenz</p>
+      <a href="#top">
+        Back to top <span aria-hidden="true">↑</span>
+      </a>
+    </footer>
+  </body>
+</html>
