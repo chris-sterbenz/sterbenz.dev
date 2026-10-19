@@ -34,4 +34,8 @@ The biography and experience descriptions are intentionally placeholders. Chapte
 
 The design uses a warm paper background, charcoal text, olive accents, serif display type, and thin rules. Native fragment links scroll directly to each section without motion.
 
-Deployment configuration and instructions arrive in the separate GitOps pull request.
+## Deployment
+
+Cloudflare Workers Static Assets serves the site. GitHub Actions validates PRs and deploys merges to `main`. Configuration lives in `wrangler.jsonc`.
+
+See [the deployment runbook](docs/deployment.md) for one-time token setup, release checks, previews, and rollback.

@@ -13,7 +13,10 @@
     "check": "astro check",
     "test": "playwright test",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "deploy:check": "wrangler deploy --env=\"\" --dry-run",
+    "deploy": "wrangler deploy --env=\"\"",
+    "deploy:preview": "wrangler deploy --env preview"
   },
   "dependencies": {
     "astro": "7.4.1"
@@ -25,6 +28,7 @@
     "@types/node": "26.6.5",
     "prettier": "3.9.10",
     "prettier-plugin-astro": "1.1.1",
-    "typescript": "6.0.3"
+    "typescript": "6.0.3",
+    "wrangler": "4.151.2"
   }
 }
