@@ -3,36 +3,83 @@ import "../styles/global.css";
 const experience = [
   {
     number: "01",
-    period: "Present",
-    role: "Building what comes next.",
-    company: "Current chapter · Placeholder",
+    period: "2026–Present",
+    role: "Staff AI Infrastructure Engineer",
+    company: "Biohub · Chan Zuckerberg Initiative",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.",
+      "I build the agent platform adopted company-wide for interactive and autonomous work. The platform combines provider-agnostic harnesses, remote sessions, model routing, and automatic provisioning with workload identity, scoped access, and audit trails.",
     detail:
-      "Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.",
-    tags: ["Infrastructure", "Platforms", "AI systems"],
+      "I also own the direction of a multi-cluster training platform scaled to 6,000+ H100 equivalents. The work spans sub-hour provisioning on neocloud clusters, data movement, and a unified API for scheduling training across the fleet.",
+    tags: [
+      "Agent platforms",
+      "GPU infrastructure",
+      "Multi-cluster scheduling",
+      "Workload identity",
+    ],
   },
   {
     number: "02",
-    period: "Previously",
-    role: "Making complex systems work.",
-    company: "Previous chapter · Placeholder",
+    period: "2024–2025",
+    role: "Senior AI Infrastructure Engineer",
+    company: "Biohub · Chan Zuckerberg Initiative",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis euismod.",
+      "I built a multi-cloud inference platform across AWS, CoreWeave, and Databricks, with Python APIs for deployment and serving. Kubernetes orchestration managed GPU allocation, replica scaling, and placement. Pre-training evaluations ran 50× faster on L40 GPUs.",
     detail:
-      "Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.",
-    tags: ["Distributed systems", "Developer tools"],
+      "I led four engineers, including two mentorship roles, through a redesign of researcher-facing cluster tools. The platform combined distributed batch inference, automated model deployment, and observability with simpler APIs, better debugging, and more reliable workspace connections.",
+    tags: ["Inference platforms", "Kubernetes", "Redis & Celery", "MLflow"],
   },
   {
     number: "03",
-    period: "Earlier",
-    role: "Starting with the foundations.",
-    company: "Earlier chapter · Placeholder",
+    period: "2021–2024",
+    role: "Machine Learning Engineer",
+    company: "Twosense, Inc.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.",
+      "I reduced model training costs by 85% while supporting a 1,000× increase in data volume. I moved large GPU training jobs to Kubernetes and Kubeflow on AWS EKS, and reduced training memory use by 100× through more efficient data loading.",
     detail:
-      "Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur.",
-    tags: ["Engineering", "Operations"],
+      "I introduced Terraform, infrastructure and data anomaly alerting, and continuous delivery across research and production. I also improved customer privacy by removing the need for sensitive data in the feature store.",
+    tags: ["Training infrastructure", "AWS EKS", "Kubeflow", "Terraform"],
+  },
+  {
+    number: "04",
+    period: "2018–2021",
+    role: "Machine Learning Engineer",
+    company: "SciTec, Inc.",
+    description:
+      "I developed recurrent super-resolution models for satellite video and reduced training time and resource use to 25% of the original requirements. I also implemented an LSTM alternative to a geospatial threat classifier and led company-wide deep learning workshops.",
+    detail:
+      "As lead developer, I maintained a real-time C++ classification system for two years and helped move tightly coupled legacy software toward a service architecture. I coordinated five developers and built a CI pipeline with sustained 95% Google Test coverage.",
+    tags: ["Deep learning", "Computer vision", "C++", "Continuous integration"],
+  },
+  {
+    number: "05",
+    period: "Summer 2017",
+    role: "Mobile Website Development Contractor",
+    company: "Blue Hill Data Services · Pearl River, NY",
+    description:
+      "I developed a dynamic website that gave clients a consistent experience across devices.",
+    detail:
+      "I worked directly with senior executives to match the design to their specifications.",
+    tags: ["Web development", "Responsive design"],
+  },
+  {
+    number: "06",
+    period: "2016–2018",
+    role: "IT Support",
+    company: "ResNet TCNJ · Ewing, NJ",
+    description:
+      "I helped users diagnose and resolve a range of technical problems as a customer-facing support specialist.",
+    detail: null,
+    tags: ["Technical support", "Troubleshooting"],
+  },
+  {
+    number: "07",
+    period: "2014–2018",
+    role: "B.S. in Computer Science",
+    company: "The College of New Jersey · Ewing, NJ",
+    description:
+      "Bachelor of Science in Computer Science, with a minor in Statistics.",
+    detail: null,
+    tags: ["Education", "Computer science", "Statistics"],
   },
 ];
 ---
@@ -44,7 +91,7 @@ const experience = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Chris Sterbenz — infrastructure, platforms, and the systems behind them. Experience and links."
+      content="Chris Sterbenz — AI infrastructure and platform engineer building GPU computing, multi-cloud inference, and research platforms."
     />
     <meta name="theme-color" content="#f5f3ed" />
     <link rel="canonical" href="https://sterbenz.dev/" />
@@ -53,7 +100,7 @@ const experience = [
     <meta property="og:title" content="Chris Sterbenz — sterbenz.dev" />
     <meta
       property="og:description"
-      content="Infrastructure, platforms, and the systems behind them."
+      content="AI infrastructure, GPU computing, and research platforms."
     />
     <meta property="og:url" content="https://sterbenz.dev/" />
     <title>Chris Sterbenz — sterbenz.dev</title>
@@ -85,16 +132,17 @@ const experience = [
             Sterbenz<span class="accent">.</span>
           </h1>
           <p class="intro-line">
-            Infrastructure, platforms,
+            AI infrastructure
             <br />
-            and the systems behind them.
+            and research platforms.
           </p>
           <div class="about">
             <h2>About me</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
-              leo quam. Pellentesque ornare sem lacinia quam venenatis
-              vestibulum. Donec ullamcorper nulla non metus auctor fringilla.
+              I build distributed systems for GPU computing, multi-cloud
+              inference, and AI research. At Biohub, I work on agent platforms
+              and the infrastructure behind large-scale training and inference.
+              Based in New York.
             </p>
           </div>
         </div>
@@ -145,7 +193,7 @@ const experience = [
               <strong>
                 Résumé <span class="file-tag">PDF</span>
               </strong>
-              <small>Download · placeholder edition</small>
+              <small>Download · Updated October 22, 2026</small>
             </span>
             <span class="link-arrow" aria-hidden="true">
               ↓
@@ -161,7 +209,9 @@ const experience = [
         <div class="section-label">
           <span class="eyebrow">02 / The work</span>
           <h2 id="experience-title">Experience</h2>
-          <p class="section-note">A few chapters along the way.</p>
+          <p class="section-note">
+            Work, research, and the foundations behind them.
+          </p>
         </div>
         <div class="experience-list">
           {experience.map((item) => (
@@ -173,7 +223,7 @@ const experience = [
               <h3>{item.role}</h3>
               <p class="company">{item.company}</p>
               <p>{item.description}</p>
-              <p>{item.detail}</p>
+              {item.detail && <p>{item.detail}</p>}
               <ul class="tags" aria-label="Areas of work">
                 {item.tags.map((tag) => (
                   <li>{tag}</li>
