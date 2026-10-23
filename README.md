@@ -27,10 +27,10 @@ The browser checks cover desktop and mobile accessibility, fragment navigation, 
 - `src/pages/index.astro` — biography, links, and experience entries.
 - `src/styles/global.css` — layout, responsive styles, and print styles.
 - `public/headshot.jpg` — local copy of Chris's public GitHub profile photo.
-- `public/chris-sterbenz-resume.pdf` — valid, clearly marked placeholder PDF. Replace with the final résumé at the same path.
+- `public/chris-sterbenz-resume.pdf` — the supplied October 22, 2026 résumé, served at a stable download URL.
 - `public/favicon.svg` — typographic favicon.
 
-The biography and experience descriptions are intentionally placeholders. Chapter headings and subject tags are also provisional. LinkedIn and GitHub link to the real profiles.
+The biography, experience, and education summarize the October 22, 2026 résumé. Update the page and PDF together when the résumé changes. LinkedIn and GitHub link to the real profiles.
 
 The design uses a warm paper background, charcoal text, olive accents, serif display type, and thin rules. Native fragment links scroll directly to each section without motion.
 
